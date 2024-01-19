@@ -24,7 +24,7 @@ std::string calculateFileHash(const std::string& filePath)
 
 int main()
 {
-    std::string filePath = "/home/stud/C++Projects/SoSlave/SlavePract4/exist"; // Замените на путь к вашему файлу
+    std::string filePath = "/home/stud/C++Projects/Education/KarginNikita/EXMPL.txt"; // Замените на путь к вашему файлу
     std::string hashResult = calculateFileHash(filePath);
 
     if (!hashResult.empty()) {
