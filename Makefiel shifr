@@ -1,0 +1,12 @@
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall -Wextra
+LIBS = -lcryptopp
+
+all: encrypt_decrypt
+
+encrypt_decrypt: main.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $< $(LIBS)
+
+.PHONY: clean
+clean:
+	rm -f encrypt_decrypt

@@ -1,0 +1,13 @@
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall -Wextra
+LIBS = -lcryptopp
+
+all: hash_program
+
+hash_program: hash_program.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $< $(LIBS)
+
+.PHONY: clean
+clean:
+	rm -f hash_program
+
