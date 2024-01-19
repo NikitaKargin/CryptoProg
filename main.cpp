@@ -16,7 +16,7 @@ SecByteBlock DeriveKey(const std::string& password)
     SecByteBlock derived(AES::DEFAULT_KEYLENGTH);
     PKCS5_PBKDF2_HMAC<SHA256> pbkdf;
     const byte* salt = (const byte*)"somesalt"; // Ваша соль
-    size_t saltLen = 8; // Длина соли
+    size_t saltLen = size_t saltLen = strlen((const char*)salt); // Длина соли
     pbkdf.DeriveKey(derived, derived.size(), 0, (const byte*)password.data(), password.size(), salt, saltLen, 1000, 0.0);
     return derived;
 }
